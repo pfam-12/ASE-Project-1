@@ -9,17 +9,38 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/gallery.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/aos_effect.css" />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+
+    <!-- attach the webstyle sheets ---->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   
+    <!-- including aos library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+  
+      function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("func_navbar").style.padding = "2px 2px";
+          document.getElementById("func_logo").style.fontSize = "5px";
+        } else {
+          document.getElementById("func_navbar").style.padding = "10px 10px";
+          document.getElementById("func_logo").style.fontSize = "5px";
+        }
+      }
+    </script>
 </head>
 <body>
     <div style="width:100%">
@@ -31,23 +52,35 @@
         </div>
     </div>
     <!-- navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand pb-2" href="#">Navbar</a>
+      <nav id="func_navbar" class="navbar navbar-custom navbar-expand-md navbar-dark bg-dark sticky-top" style="position: sticky;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a id="func_logo" class="nav-link" href="#"><img src="./img/iiits/iiits_logo.png" style="width:11%;"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">News Feed</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#recent_events">Recent Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
                 </li>
                 <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact us </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="nav-link dropdown-item" href="#" style="color:black">How to reach?</a></li>
+                      <li><a class="nav-link dropdown-item" href="#" style="color:black">Contact Form</a></li>
+                  </ul>
+                </li>  
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -80,7 +113,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li>
+                </li> -->
             </ul>
         </div>
       </nav>
@@ -129,14 +162,14 @@
       
       </div>
       <div class="jumbotron row" style="text-align: center;background-color: transparent;margin-right:0px;">
-        <div class="col-sm-7 divhover" style="border: 1px solid grey;padding:2%;margin:1%">
+        <div class="col-sm-7 divhover" data-aos="fade-right" style="border: 1px solid grey;padding:2%;margin:1%">
           <h2>FUNDRAISING PROJECTS</h2>
         </div>
-        <div class="col-sm-4 divhover" style="border: 1px solid grey;padding:2%;margin:1%">
+        <div class="col-sm-4 divhover" data-aos="fade-left" style="border: 1px solid grey;padding:2%;margin:1%">
           <h2>EVENTS</h2>
         </div>
       </div>
-      <div class="jumbotron divhover container" style="padding:20px;background-color:transparent;border: 1px solid grey;">
+      <div class="jumbotron divhover container" data-aos="fade-up" id="recent_events" style="padding:20px;background-color:transparent;border: 1px solid grey;">
         <h2>RECENT EVENTS</h2>
         <div class="row" style="padding:40px;">
           <div class="pic col-sm-3">
@@ -251,6 +284,12 @@
             x.className = "topnav";
         }
         }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1300,
+      })
     </script>
 </body>
 </html>
